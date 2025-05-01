@@ -9,8 +9,8 @@
 
 ## Main changes for personal use
 Use prokka output as input
-Genome_prokka.gff
-Genome_prokka.fna
+- Genome_prokka.gff
+- Genome_prokka.fna
 ```
 #need delete sequences in gff files before running
 for i in *gff; do sed '/^##FASTA/,$d' $i > temp && mv temp $i; done
