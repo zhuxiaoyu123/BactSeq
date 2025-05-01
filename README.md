@@ -7,6 +7,17 @@
 [![run with docker](https://img.shields.io/badge/run%20with-docker-0db7ed?labelColor=000000&logo=docker)](https://www.docker.com/)
 [![run with singularity](https://img.shields.io/badge/run%20with-singularity-1d355c.svg?labelColor=000000)](https://sylabs.io/docs/)
 
+## Main changes for personal use
+Use prokka output as input
+Genome_prokka.gff
+Genome_prokka.fna
+```
+#need delete sequences in gff files before running
+for i in *gff; do sed '/^##FASTA/,$d' $i > temp && mv temp $i; done
+```
+
+
+
 ## Introduction
 
 **BactSeq** is a Nextflow pipeline for performing bacterial RNA-Seq analysis.
@@ -35,7 +46,7 @@ You will need to install [`Nextflow`](https://www.nextflow.io/) (version 21.10.3
 
 ```
 Usage:
-nextflow run BactSeq --data_dir [dir] --sample_file [file] --ref_genome [file] --ref_ann [file] -profile conda [other_options]
+nextflow run BactSeq --skip_trimming true --paired true --data_dir [dir] --sample_file [file] --ref_genome [file] --ref_ann [file] -profile conda [other_options]
 
 Mandatory arguments:
   --data_dir [file]               Path to directory containing FastQ files.
