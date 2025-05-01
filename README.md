@@ -26,7 +26,7 @@ nextflow run ~/software/BactSeq/main.nf --skip_trimming true --paired true --dat
 #$2: sample metadata
 #$3: genome file (must be prokka output, because prokka will change contig name before annotation)
 #$4: gff file (must be prokka output)
-#This software has a problem when running --skip_trimming true. It still try to find the trimmed reads for bwa mapping. I changed a little bit to let it 
+#This software has a problem when running --skip_trimming true. It still try to find the trimmed reads for bwa mapping. I changed a little bit to let it find the right fq files. However, it cannot run the trim now because i am not a expert on nf and i don't have time to fix it. To sum, this software can only accept trimmed reads and genome/gff files in prokka format now.
 ```
 
 
