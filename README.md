@@ -16,6 +16,19 @@ Use prokka output as input
 for i in *gff; do sed '/^##FASTA/,$d' $i > temp && mv temp $i; done
 ```
 
+```
+#activate environment
+source ~/miniconda/bin/activate BactSeq
+
+#commands:
+nextflow run ~/software/BactSeq/main.nf --skip_trimming true --paired true --data_dir $1 --sample_file $2 --ref_genome $3 --ref_ann $4 -profile conda 
+#$1: fastq folder (must be gz format)
+#$2: sample metadata
+#$3: genome file (must be prokka output, because prokka will change contig name before annotation)
+#$4: gff file (must be prokka output)
+#This software has a problem when running --skip_trimming true. It still try to find the trimmed reads for bwa mapping. I changed a little bit to let it 
+```
+
 
 
 ## Introduction
