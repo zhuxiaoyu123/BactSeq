@@ -9,7 +9,7 @@
 
 ## Introduction
 
-**BactSeq2** is a Nextflow pipeline for performing bacterial RNA-Seq analysis.
+**BactSeq** is a Nextflow pipeline for performing bacterial RNA-Seq analysis.
 
 ## News and updates
 
