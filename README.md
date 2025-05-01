@@ -7,7 +7,7 @@
 [![run with docker](https://img.shields.io/badge/run%20with-docker-0db7ed?labelColor=000000&logo=docker)](https://www.docker.com/)
 [![run with singularity](https://img.shields.io/badge/run%20with-singularity-1d355c.svg?labelColor=000000)](https://sylabs.io/docs/)
 
-## Main changes for personal use
+## Main changes for personal use (Xiaoyu)
 Use prokka output as input
 - Genome_prokka.gff
 - Genome_prokka.fna
