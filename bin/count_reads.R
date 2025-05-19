@@ -68,7 +68,7 @@ merged_total_counts <- as.data.frame(do.call(rbind, total_counts_list))
 ## ------------------------------------------------------------------------------
 ref_annot <- ape::read.gff(gff_f, na.strings = c(".", "?"), GFF3 = TRUE)
 
-ref_annot <- subset(ref_annot, type %in% c("CDS"))
+ref_annot <- subset(ref_annot, type %in% c("CDS","tRNA"))
 
 gene_biotypes <- ref_annot$type
 
